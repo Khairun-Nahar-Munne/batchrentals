@@ -1,9 +1,13 @@
+*{
+    font-family: "Montserrat", serif;
+}
 .container {
     margin: 0 auto;
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: 116px;
+    padding-left: 116px;
     padding-top: 40px;
     padding-bottom: 40px;
+    align-items: stretch; 
 }
 .left-div{
     position: relative;
@@ -12,12 +16,14 @@
 }
 .top-image {
     width: 100%;
-    height: 541px;
+    height: 100%;
+    border-radius: 5px 0px 0px 5px;
 }
+
 .bottom-image {
     position: absolute;
-    top: 5%;
-    left: 5%;
+    top: 40px;
+    left: 40px;
     width: 20%;
     max-width: 200px;
 }
@@ -28,54 +34,72 @@
     height: 541px;
     border-radius: 0px 5px 5px 0px;
 }
-.right-div p{
+.paragraph {
     line-height: 26px;
 }
-.right-div h2{
+.heading2{
     font-weight: 600;
+    line-height: 34px;
 }
-.content {
-    padding: 50px;
-}
+
 .connect-button {
     display: inline-block;
-    background-color: #00cd93;
+    background-color: #62E2BE;
     text-decoration: none;
     padding: 8px 15px 8px 15px;
     border-radius: 5px;
-    margin-top: 20px;
     font-size: 14px;
-    text-align: left;
+    text-align: center;
     text-transform: uppercase;
     font-weight: 600;
 }
-@media only screen and (max-width:1440px) {
+
+
+
+@media only screen and (min-width:1440px) and (max-width: 1920px) {
     .right-div {
         padding: 59px 58px;
     }
+    .container{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
     
   }
-@media only screen and (min-width: 992px) and (max-width: 1439px) {
+
+@media only screen and (max-width: 1439px) {
     .container{
         flex-direction: column;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .top-image {
+       border-radius: 5px 5px 0px 0px;
     }
     .right-div {
         padding: 50px 60px;
         width: 100%;
+        height: 100%;
+        border-radius: 0px 0px 5px 5px;
     }
     .left-div{
         width:100%;
+        height:800px;
     }
 }
-@media only screen and (max-width: 993px)  {
-    .container{
-        flex-direction: column;
-    }
-    .right-div {
-        padding: 50px 60px;
-        width: 100%;
-    }
+@media only screen and (max-width: 991px)  {
     .left-div{
         width:100%;
+        height:335px;
     }
+    
+}
+@media only screen and (max-width: 480px)  {
+    .container{
+        padding: 0px;
+    }
+    .right-div {
+        padding: 22px 20px 30px;
+    }
+    
 }
